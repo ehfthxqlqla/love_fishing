@@ -24,6 +24,10 @@ const step1 = `
 const container = document.querySelector(".container")
 
 window.onload = () => {
+    setTimeout(() => {
+        document.querySelector(".css-step1-welcome").innerText = `연애운 테스트에 오신것을 환영합니다!`
+    }, 1);
+
     const qs = queryString(window.location.search)
 
     console.log(qs)
@@ -38,3 +42,15 @@ window.onload = () => {
         document.querySelector(".css-step1-termsbox").style.transform = `translate(-50%, -50%)`
     }
 }
+
+const nextButton1 = document.querySelector(".js-next-step1"),
+termsAcceptButton = document.querySelector(".js-accept-terms"),
+termsDenyButton = document.querySelector(".js-deny-terms")
+
+termsAcceptButton.addEventListener("click", function() {
+    nextButton1.disabled = false
+})
+
+termsDenyButton.addEventListener("click", function() {
+    nextButton1.disabled = true
+})
