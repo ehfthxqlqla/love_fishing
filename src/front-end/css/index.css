@@ -24,11 +24,25 @@ body {
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
-    background: url('../images/bg1.jpg') no-repeat;
+    background: url('../images/bg2.jpg') no-repeat;
+}
+
+input:focus::placeholder {
+    color: transparent;
 }
 
 :where(h1, h2, h3):not(.css-exception) {
     text-align: center;
+}
+
+.css-cursor {
+    cursor: pointer;
+    user-select: none;
+    color: rgb(151, 151, 151);
+}
+
+.css-cursor:where(:hover, :focus) {
+    text-decoration: underline;
 }
 
 .container {
@@ -38,14 +52,17 @@ body {
 }
 
 .css-step1-welcome {
+    -webkit-text-stroke: 1px white;
     font-family: 'Gmarket Sans', sans-serif;
     transform: translateY(-60px);
     transition: 1s ease;
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 70px;
 }
 
 .css-step1-subwelcome {
+    -webkit-text-stroke: .5px white;
+    font-weight: 600;
     transition: 1.3s ease;
     transform: translateY(-160px);
 }
@@ -79,6 +96,11 @@ body {
     user-select: none;
     font-size: 18px;
     margin-left: 15px;
+}
+
+.js-accept-terms {
+    margin-left: 15px;
+    font-size: 18px;
 }
 
 .js-next-step1 {
@@ -132,7 +154,7 @@ body {
     border: 1px solid black;
     border-radius: 50%;
     width: 100px;
-    height: 105px;
+    height: 100px;
 }
 
 .css-step2-information-input {
@@ -148,4 +170,9 @@ body {
 .css-step2-information-input-name {
     width: 85px;
     font-size: 30px;
+}
+
+.css-infotext {
+    margin-left: 20px;
+    font-size: 24px;
 }
